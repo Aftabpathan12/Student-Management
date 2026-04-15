@@ -1,0 +1,57 @@
+/* CONTAINER */
+.admin-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.admin-navbar {
+  background: #1e293b;
+  color: white;
+  padding: 15px 20px;
+}
+
+/* BODY */
+.admin-body {
+  display: flex;
+  flex: 1;
+}
+
+/* SIDEBAR */
+.admin-sidebar {
+  width: 220px;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* LINKS */
+.admin-sidebar a {
+  color: #cbd5f5;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.admin-sidebar a:hover {
+  background: #1e293b;
+}
+
+/* ACTIVE */
+.admin-sidebar .active {
+  background: #2563eb;
+  color: white;
+}
+
+/* CONTENT */
+.admin-content {
+  flex: 1;
+  padding: 20px;
+  background: #f1f5f9;
+  overflow-y: auto;
+}

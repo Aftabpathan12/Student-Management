@@ -1,0 +1,105 @@
+/* WRAPPER */
+.courses-wrapper {
+  width: 100%;
+  padding: 10px;              /* ❌ 30px hatao (dashboard break hota hai) */
+  box-sizing: border-box;
+}
+
+/* TITLE */
+.title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* GRID */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* ✅ better responsive */
+  gap: 20px;
+}
+
+/* CARD */
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE BOX */
+.image-box {
+  width: 100%;
+  height: 180px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box img {
+  width: 80%;        /* ✅ control size */
+  height: auto;      /* ✅ maintain ratio */
+  object-fit: contain;
+}
+.course-card {
+  overflow: hidden;  /* already hai but confirm */
+}
+
+/* BODY */
+.course-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* TITLE */
+.course-body h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* DESCRIPTION */
+.desc {
+  font-size: 13px;
+  color: #666;
+  height: 38px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* PRICE */
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2563eb;
+}
+
+/* BUTTON */
+.course-body button {
+  margin-top: auto;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.course-body button:hover {
+  background: #1d4ed8;
+}
+
+.course-body button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}

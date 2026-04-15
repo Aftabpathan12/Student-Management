@@ -1,0 +1,57 @@
+/* PAGE BACKGROUND */
+.checkout-wrapper {
+  min-height: 100vh;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN BOX */
+.checkout-box {
+  width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.checkout-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.checkout-box input,
+.checkout-box select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* TWO INPUT ROW */
+.form-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* BUTTON */
+.checkout-box button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.checkout-box button:hover {
+  background: #1d4ed8;
+}
