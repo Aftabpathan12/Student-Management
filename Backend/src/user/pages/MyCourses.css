@@ -1,0 +1,137 @@
+/* MyCourses.css - Simple & Clean */
+
+.mycourses-wrapper {
+  padding: 20px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #667eea;
+  display: inline-block;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Grid Layout */
+.mycourses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Course Card */
+.mycourse-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mycourse-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Box - Fixed Size */
+.image-box {
+  width: 100%;
+  height: 180px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.image-box img {
+  max-width: 120px;   /* ✅ fixed logo size */
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* ✅ no crop */
+}
+
+.mycourse-card:hover .image-box img {
+  transform: scale(1.05);
+}
+
+/* Course Body */
+.course-body {
+  padding: 15px;
+}
+
+.course-body h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  min-height: 44px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #667eea;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mycourses-wrapper {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .mycourses-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .image-box {
+    height: 160px;
+  }
+  
+  .course-body h3 {
+    font-size: 14px;
+    min-height: 40px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mycourses-wrapper {
+    padding: 10px;
+  }
+  
+  .mycourses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+ .image-box {
+  width: 100%;
+  height: 180px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+}

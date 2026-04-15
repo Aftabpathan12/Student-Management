@@ -1,0 +1,34 @@
+MAIN LAYOUT
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;   /* ✅ IMPORTANT */
+}
+
+/* CONTENT AREA */
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}
+
+/* MAIN CONTENT */
+.dashboard-content {
+  flex: 1;
+  padding: 25px;
+  background-color: #f4f6f9;
+}
+
+/* HEADING */
+.dashboard-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #1f2937;
+}
+
+/* OPTIONAL CARD WRAPPER (for courses spacing) */
+.dashboard-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}

@@ -1,0 +1,54 @@
+.footer {
+  background: #1f2937;
+  color: #fff;
+  padding-top: 30px;
+  margin-top: 40px;
+}
+
+/* MAIN CONTAINER */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 0 40px;
+}
+
+/* SECTION */
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* LINKS */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.footer-section li:hover {
+  color: #60a5fa;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #374151;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.footer {
+  margin-top: auto;   /* ✅ THIS IS THE KEY FIX */
+}

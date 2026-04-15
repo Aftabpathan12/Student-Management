@@ -1,0 +1,259 @@
+/* AdminNavbar.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-navbar-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo Section */
+.admin-logo-section {
+  flex-shrink: 0;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.admin-logo:hover {
+  transform: translateY(-2px);
+}
+
+.logo-icon {
+  font-size: 2rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.logo-info {
+  line-height: 1.2;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 0%, #e0e7ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.logo-subtitle {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Admin Info Section */
+.admin-info-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.admin-welcome {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.welcome-icon {
+  font-size: 1.1rem;
+}
+
+.welcome-text {
+  color: white;
+  font-size: 0.9rem;
+}
+
+.welcome-text strong {
+  font-weight: 700;
+  color: #ffd700;
+}
+
+/* Logout Button */
+.admin-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: rgba(220, 38, 38, 0.8);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-logout-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.admin-logout-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.admin-logout-btn:hover {
+  background: rgba(220, 38, 38, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.admin-logout-btn:active {
+  transform: translateY(0);
+}
+
+.logout-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.admin-logout-btn:hover .logout-icon {
+  transform: translateX(3px) rotate(15deg);
+}
+
+.logout-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-navbar-container {
+    padding: 0.7rem 1.5rem;
+    gap: 1rem;
+  }
+  
+  .logo-text {
+    font-size: 1.1rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.6rem;
+  }
+  
+  .logo-subtitle {
+    display: none;
+  }
+  
+  .welcome-text {
+    display: none;
+  }
+  
+  .admin-welcome {
+    padding: 0.5rem;
+  }
+  
+  .welcome-icon {
+    font-size: 1.2rem;
+  }
+  
+  .admin-logout-btn {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logout-text {
+    display: none;
+  }
+  
+  .logout-icon {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-navbar-container {
+    padding: 0.6rem 1rem;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.4rem;
+  }
+  
+  .admin-welcome {
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .welcome-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for navbar */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-navbar {
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Optional: Add hover effect for the entire navbar */
+.admin-navbar:hover {
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
